@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Clínica</title>
+</head>
+<body>
+    <main>
+        <img src="img/login-img.jpg" alt="">
+        <div id="content">
+            <h3>Login</h3>
+            <div action="">
+                <div class="campos">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <label for="">Nome</label>
+                    </div>
+                    <input id="instituicao" type="text" placeholder="Digite o nome da instituição" required>
+                </div>
+                <div class="campos">
+                    <div>
+                        <i class="fa-solid fa-file-contract"></i>
+                        <label for="">Cnpj</label>
+                    </div>
+                    <input id="cnpj" type="text" placeholder="Digite seu CNPJ" required>
+                </div>
+                <button onclick="entrar();">Login</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
