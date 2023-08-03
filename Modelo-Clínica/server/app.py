@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/verificar-paciente", methods=["GET"])
 def verificar_paciente():
@@ -17,7 +19,7 @@ def consultar_dados():
     cpf = request.args.get("cpf")
     cnpj = request.args.get("cnpj")
     instituicao = request.args.get("instituicao")
-    return jsonify(requests.get(f"http://10.0.26.217:5000/consultar-dados?cpf={cpf}&cnpj={cnpj}&instituicao={instituicao}").json())
+    return jsonify(requests.get(f"http://localhost:5000/consultar-dados?cpf={cpf}&cnpj={cnpj}&instituicao={instituicao}").json())
     
 
 if __name__ == "__main__":

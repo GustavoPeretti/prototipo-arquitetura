@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
 
-address =  '10.0.26.217'
+address =  'localhost'
 
 app = Flask(__name__)
 CORS(app)

@@ -4,10 +4,10 @@ import requests
 import pymysql
 import datetime
 
-address = '10.0.22.16'
+address = 'localhost'
 
 def bd_consulta(instrucao):
-    conexao = pymysql.connect(db="hospital", user="root", password="bananasplit2023")
+    conexao = pymysql.connect(db="hospital", user="root", password="Lapis1895#")
     cursor = conexao.cursor()
     cursor.execute(instrucao)
     resultado = cursor.fetchall()

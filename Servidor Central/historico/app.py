@@ -3,7 +3,7 @@ from flask_cors import CORS
 import pymysql
 
 def bd_consulta(instrucao, dict_mode=False):
-    conexao = pymysql.connect(db="hospital", user="root", password="bananasplit2023")
+    conexao = pymysql.connect(db="hospital", user="root", password="Lapis1895#")
     if dict_mode:
         cursor = conexao.cursor(pymysql.cursors.DictCursor)
     else:
