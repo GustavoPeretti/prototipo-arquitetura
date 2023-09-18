@@ -7,7 +7,7 @@ import datetime
 address = 'localhost'
 
 def bd_consulta(instrucao):
-    conexao = pymysql.connect(db="hospital", user="root", password="Lapis1895#")
+    conexao = pymysql.connect(db="hospital", user="root", password="")
     cursor = conexao.cursor()
     cursor.execute(instrucao)
     resultado = cursor.fetchall()
