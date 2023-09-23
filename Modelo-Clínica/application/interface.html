@@ -19,11 +19,17 @@
                 <i class="fa-solid fa-id-card"></i>
                 <label for="">CPF</label>
             </div>
-            <input onkeydown="formatarCPF(this);" type="text" maxlength="14" required placeholder="Digite o CPF" name="" id="cpf">
+            <input onkeydown="formatarCPF(this);" type="text" maxlength="14" placeholder="Digite o CPF" name="" id="cpf">
             <button onclick="solicitarDados();">Solicitar</button>
         </div>
         <div id="content-dados">
-            <h3>Central de Dados</h3>
+            <div id="tabs">
+                <span id="tab-paciente" onclick="selectTab('paciente');" class="selected">Paciente</span>
+                <span id="tab-planos" onclick="selectTab('planos');">Planos</span>
+                <span id="tab-medicos" onclick="selectTab('medicos');">Médicos</span>
+                <span id="tab-consultas" onclick="selectTab('consultas');">Consultas</span>
+                <span id="tab-cirurgias" onclick="selectTab('cirurgias');">Cirurgias</span>
+            </div>
             <div id="resultado"></div>
         </div>
     </main>

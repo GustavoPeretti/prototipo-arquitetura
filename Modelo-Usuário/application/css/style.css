@@ -1,234 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 main {
-    margin: 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
-.title {
-    font-size: 2em;
-    font-weight: bold;
+img {
+    max-width: 60%;
 }
 
-#notification-board {
-    margin-top: 15px;
+#content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    height: 100%;
     width: 100%;
-    max-height: 500px;
-    background: rgb(255, 0, 0);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10px );
-    -webkit-backdrop-filter: blur( 10px );
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid rgba( 255, 255, 255, 0.18 );
+    border-left: 1px solid red;
 }
 
-.prev-not {
+h3 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: red;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.434);
+}
+
+.campos {
     display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 400;
-    color: #000000;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
+    flex-direction: column;
+}
+
+.campos div {
     margin-bottom: 5px;
 }
 
-.not-btn {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: rgb(0, 0, 0);
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  justify-content: center;
-  margin: 0;
-  padding: 10px;
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
+label {
+    font-weight: 500;
 }
 
-.not-btn:hover,
-.not-btn:focus {
-  background-color: #ff0000;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+i {
+    color: red;
 }
 
-.not-btn:hover {
-  transform: translateY(-1px);
+input {
+    padding: 5px 10px;
+    width: 300px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1.5px solid red;
+    background-color: transparent;
 }
 
-.not-btn:active {
-  background-color: #ff0000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
-}
-
-#allow:hover, #allow:active, #allow:focus {
-    background-color: rgba(106, 173, 6, 0.832);
-}
-
-#dados {
-    margin-top: 50px;
-}
-
-#dados .title {
-    text-align: center;
-}
-
-#dados-board {
+button {
     margin-top: 20px;
-    background: rgba( 255, 255, 255, 0.35 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13px );
-    -webkit-backdrop-filter: blur( 13px );
+    width: 300px;
+    padding: 5px 20px;
+    font-size: 20px;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
     border-radius: 10px;
-    border: 1px solid rgb(255, 0, 0);
-    padding: 20px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
 }
 
-.subtitle {
-    margin-bottom: 10px;
+button:hover {
+    background-color: red;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.586);
 }
 
-.dados-btn {
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 12px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  will-change: transform;
-}
+@media screen and (max-width: 700px) {
+    img {
+        display: none;
+    }
 
-.dados-btn:disabled {
-  pointer-events: none;
-}
-
-.dados-btn:hover {
-  border: 2px solid #ff0000;
-  color: #fff;
-  background-color: #ff0000;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
-.dados-btn:active {
-  box-shadow: none;
-  transform: translateY(0);
-}
-
-#title {
-    text-align: center;
-    color: #ff0000;
-}
-
-#modal {
-  display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  z-index: 500;
-  font-size: 1.2em;
-}
-
-#modal-container {
-  position: fixed;
-  inset: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border-radius: 2em;
-  z-index: 501;
-  width: 20em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 20em;
-  max-height: 40em;
-  padding: 1.5em;
-}
-
-#modal-container h3 {
-  font-size: 1.3em;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-#modal-container ul {
-  list-style-type: none;
-  margin-bottom: 1em;
-  overflow: auto;
-}
-
-#modal-container ul li {
-  width: 10em;
-  padding: 0.5em;
-  display: flex;
-  justify-content: space-between;
-}
-
-#modal-container ul li:first-child {
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-}
-
-#modal-container ul li:last-child {
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-}
-
-#modal-container ul li:nth-child(odd) {
-  background-color: gray;
-}
-
-#modal-container ul li:nth-child(even) {
-  background-color: rgb(190, 190, 190);
-}
-
-#modal-container ul li button, #modal-container > button {
-  font-size: 0.7em;
-  padding: 0.3em;
+    #content {
+        align-items: center;
+        width: 100%;
+    }
 }

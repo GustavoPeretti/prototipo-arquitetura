@@ -111,6 +111,30 @@ h3 {
     font-size: 1.5em;
 }
 
+#content-dados #tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    padding-bottom: 0.5em;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5em;
+}
+
+#content-dados #tabs span {
+    cursor: pointer;
+    user-select: none;
+}
+
+.selected {
+    font-weight: bold;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
 .paciente {
     border: 1px solid red;
     border-radius: 5px;

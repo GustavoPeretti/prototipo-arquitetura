@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Usuário</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Paciente</title>
 </head>
 <body>
     <main>
-        <h1 id="title">Privacy Shield: Usuário</h1>
-        <section id="notification">
-            <h1 class="title">Notificações</h1>
-            <div id="notification-board"></div>
-        </section>
-        <section id="dados">
-            <h1 class="title">Seus Dados</h1>
-            <div id="dados-board">
-                <h3 class="subtitle">Clínicas</h3>
-                <button class="dados-btn" id="list">Solicicitar Lista de Permissão</button>
+        <img src="img/login-img.jpg" alt="">
+        <div id="content">
+            <h3>Login</h3>
+            <div>
+                <div class="campos">
+                    <div>
+                        <i class="fa-solid fa-file-contract"></i>
+                        <label for="">CPF</label>
+                    </div>
+                    <input onkeydown="formatarCPF(this);" maxlength="14" id="cpf" type="text" placeholder="Digite seu CPF">
+                </div>
+                <button onclick="entrar();">Login</button>
             </div>
-        </section>
-    </main>
-    <div id="modal">
-        <div id="modal-container">
-            <h3>Instituições com acesso aos dados:</h3>
-            <ul>
-                <li>
-                    <span>Instituição</span>
-                    <button>Restringir</button>
-                </li>
-            </ul>
-            <button id="fechar-modal">Fechar</button>
         </div>
-    </div>
-    <script src="js/script.js"></script>
-    <!-- Permitir/Negar Acesso a dados
-         Solicitar acesso a lista de clínicas que tem acesso a seus dados
-         Solicitar remoção de dados  -->
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
