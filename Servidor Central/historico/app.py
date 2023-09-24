@@ -1,9 +1,9 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 import pymysql
 
 def bd_consulta(instrucao, dict_mode=False):
-    conexao = pymysql.connect(db="hospital", user="root", password="")
+    conexao = pymysql.connect(db="hospital", user="root", password="Lapis1895#")
     if dict_mode:
         cursor = conexao.cursor(pymysql.cursors.DictCursor)
     else:
@@ -18,6 +18,10 @@ def bd_consulta(instrucao, dict_mode=False):
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/consultar')
 def consultar():

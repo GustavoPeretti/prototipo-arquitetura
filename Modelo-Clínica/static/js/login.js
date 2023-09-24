@@ -9,5 +9,5 @@ function entrar() {
     localStorage.setItem('cnpj', cnpj);
     localStorage.setItem('instituicao', instituicao);
 
-    window.location.href = "interface.html";
+    window.location.href = "interface";
 }
