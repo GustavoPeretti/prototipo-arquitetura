@@ -7,7 +7,7 @@ function entrar() {
     
     localStorage.setItem('cpf', cpf);
 
-    window.location.href = "interface.html";
+    window.location.href = "interface";
 }
 
 function formatarCPF(obj) {

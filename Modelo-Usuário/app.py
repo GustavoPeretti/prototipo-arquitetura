@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import requests
 
@@ -20,6 +20,15 @@ class Solicitacao:
 
     def responder(self, resposta):
         self.estado = resposta
+
+
+@app.route("/")
+def index():
+    return render_template('index.html')
+
+@app.route('/interface')
+def interface():
+    return render_template('interface.html')
 
 # Instituição solicita nesta rota
 @app.route('/solicitacao', methods=['GET'])
